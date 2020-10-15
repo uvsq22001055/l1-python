@@ -15,7 +15,6 @@ print(temps[0],"jours",temps[1],"heures",temps[2],"minutes",temps[3],"secondes")
 
 #fonction auxiliaire ici
 
-temps =(1,0,14,23)
 
 def afficheTemps (temps):
 
