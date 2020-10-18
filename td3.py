@@ -30,7 +30,7 @@ def afficheTemps (temps):
             print (temps[1], "heure ", end="")
     elif temps [1] == 0:
             print(end="")
-    else:
+    else: 
             print (temps[1], "heures ", end="")
 
     if temps [2] == 1:
@@ -49,3 +49,4 @@ def afficheTemps (temps):
     return afficheTemps
 
 afficheTemps((1,0,14,23))  
+
