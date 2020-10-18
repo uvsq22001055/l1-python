@@ -72,3 +72,32 @@ def sommeTemps(temps1,temps2):
 
 
 sommeTemps((2,3,4,25),(5,22,57,1))
+
+
+def proportionTemps(temps,proportion):
+    
+    temps_proportionne = int(tempsEnSeconde(temps) * proportion)
+    temps = secondeEnTemps(temps_proportionne)
+    
+    return temps
+
+afficheTemps(proportionTemps((2,0,36,0),0.2))
+
+
+def tempsEnDate(temps):
+    s = tempsEnSeconde(temps)
+    a = s // 31536000
+    j = (s % 31536000) // 86400
+    h = ((s % 31536000) % 86400) // 3600
+    m = (((s % 31536000) % 86400) % 3600) // 60
+    s = (((s % 31536000) % 86400) % 3600) % 60
+    temps =  (a, j, h, m, s)
+    return temps
+
+def afficheDate(date = -1):
+    pass
+    
+temps = secondeEnTemps(1000000000)
+afficheTemps(temps)
+afficheDate(tempsEnDate(temps))
+afficheDate()
