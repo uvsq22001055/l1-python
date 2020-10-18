@@ -1,13 +1,21 @@
 #temps[0] : jours, temps[1]: minutes, temps[2]: minutes, temps[3]: secondes
 
 def tempsEnSeconde(temps):
-    return temps[3]
+    temps = temps[0]*86400 + temps[1]*3600 + temps[2]*60 + temps[3]
+    return temps
+
 
 temps = (3,23,1,34)
 print(type(temps))
 print(tempsEnSeconde(temps))   
 
 def secondeEnTemps(seconde):
+   j = seconde//86400
+   h = (seconde % 86400) // 3600
+   m = ((seconde % 86400) % 3600) // 60
+   s = ((seconde % 86400) % 3600) % 60
+
+   temps = (j, h, m, s)
    return temps
     
 temps = secondeEnTemps(100000)
@@ -48,5 +56,19 @@ def afficheTemps (temps):
             print (temps[3], "secondes ", end="")
     return afficheTemps
 
-afficheTemps((1,0,14,23))  
+afficheTemps((1,0,14,23))
 
+
+def demandeTemps():
+    pass
+
+
+def sommeTemps(temps1,temps2):
+    s1 = tempsEnSeconde(temps1)
+    s2 = tempsEnSeconde(temps2)
+    st  = s1 + s2
+    print(secondeEnTemps(st))
+    return
+
+
+sommeTemps((2,3,4,25),(5,22,57,1))
