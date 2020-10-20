@@ -132,3 +132,9 @@ def afficheDate(date = -1):
 temps = secondeEnTemps(1000000000)
 afficheTemps(temps)
 afficheDate(tempsEnDate(temps))S
+
+
+
+#import time
+#import calendar
+#calendar.timegm(time.gmtime())
