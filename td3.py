@@ -60,7 +60,26 @@ afficheTemps((1,0,14,23))
 
 
 def demandeTemps():
-    pass
+    j = int(input("Nombre de jours"))
+    while j < 0 :
+        j = int(input("ERREUR choisir un nombre de jours POSITIF"))
+
+    h = int(input("Nombre d'heures"))
+    while h < 0 or h > 23 :
+        h = int(input("ERREUR choisir un nombre d'heure compris entre 0 et 23"))
+
+    m = int(input("Nombre de minutes"))
+    while m < 0 or m > 59 :
+        m = int(input("ERREUR choisir un nombre de minutes compris entre 0 et 59"))
+    
+    s = int(input("Choisir un nombre de seconde"))
+    while s < 0 or s > 59 :
+        s = int(input("ERREUR choisir un nombre de seconde compris entre 0 et 59"))
+
+    temps = (j, h, m, s)
+    return temps
+
+demandeTemps()
 
 
 def sommeTemps(temps1,temps2):
@@ -91,8 +110,8 @@ def tempsEnDate(temps):
     h = ((s % 31536000) % 86400) // 3600
     mn = (((s % 31536000) % 86400) % 3600) // 60
     s = (((s % 31536000) % 86400) % 3600) % 60
-    date =  (a, j, h, mn, s)
-    return date
+    temps =  (a, j, h, mn, s)
+    return temps
 
 def afficheDate(date = -1):
     temps_0 = (1970, 1, 00, 00, 00)
@@ -131,8 +150,7 @@ def afficheDate(date = -1):
 
 temps = secondeEnTemps(1000000000)
 afficheTemps(temps)
-afficheDate(tempsEnDate(temps))S
-
+afficheDate(tempsEnDate(temps))
 
 
 #import time
