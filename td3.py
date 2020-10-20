@@ -89,14 +89,46 @@ def tempsEnDate(temps):
     a = s // 31536000
     j = (s % 31536000) // 86400
     h = ((s % 31536000) % 86400) // 3600
-    m = (((s % 31536000) % 86400) % 3600) // 60
+    mn = (((s % 31536000) % 86400) % 3600) // 60
     s = (((s % 31536000) % 86400) % 3600) % 60
-    temps =  (a, j, h, m, s)
+    temps =  (a, j, h, mn, s)
     return temps
 
-def afficheDate(date = -1):
-    pass
+
+def afficheDate(temps):
     
+
+    if temps [1] == 1:
+            print (temps[1], "jour ", end="")
+    elif temps [1] == 0:
+            print(end="")
+    else:
+            print (temps[1], "jours ", end="")
+
+    print(temps[0]," à ")
+
+    if temps [2] == 1:
+            print (temps[2], "heure ", end="")
+    elif temps [2] == 0:
+            print(end="")
+    else: 
+            print (temps[2], "heures ", end="")
+
+    if temps [3] == 1:
+            print (temps[3], "minute ", end="")
+    elif temps [3] == 0:
+            print(end="")
+    else:
+            print (temps[3], "minutes ", end="")
+
+    if temps [4] == 1:
+            print (temps[4], "seconde ", end="")
+    elif temps [4] == 0:
+            print(end="")
+    else:
+            print (temps[4], "secondes ", end="")
+    return afficheDate
+
 temps = secondeEnTemps(1000000000)
 afficheTemps(temps)
 afficheDate(tempsEnDate(temps))
