@@ -115,39 +115,43 @@ def tempsEnDate(temps):
 
 def afficheDate(date = -1):
     temps_0 = (1970, 1, 00, 00, 00)
-
-    if date [1] == 1:
-            print (date[1] + 1,"ème jour de ", end="")
-    elif date [1] == 0:
-            print(end="")
+    if date == -1 :
+        print("1 janvier 1970 à 00:00:00")
     else:
-            print (date[1] + 1,"ème jours de ", end="")
+        if date [1] == 1:
+                print (date[1] + 1,"ème jour de ", end="")
+        elif date [1] == 0:
+                print(end="")
+        else:
+                print (date[1] + 1,"ème jours de ", end="")
 
-    print(date[0] + 1970,"à ", end="")
+        print(date[0] + 1970,"à ", end="")
 
-    if date [2] == 1:
-            print (date[2], "heure ", end="")
-    elif date [2] == 0:
-            print(end="")
-    else: 
-            print (date[2], "heures ", end="")
+        if date [2] == 1:
+                print (date[2], "heure ", end="")
+        elif date [2] == 0:
+                print(end="")
+        else: 
+                print (date[2], "heures ", end="")
 
-    if date [3] == 1:
-            print (date[3], "minute ", end="")
-    elif date [3] == 0:
-            print(end="")
-    else:
-            print (date[3], "minutes ", end="")
+        if date [3] == 1:
+                print (date[3], "minute ", end="")
+        elif date [3] == 0:
+                print(end="")
+        else:
+                print (date[3], "minutes ", end="")
 
-    if date [4] == 1:
-            print (date[4], "seconde ", end="")
-    elif date [4] == 0:
-            print(end="")
-    else:
-            print (date[4], "secondes\n ")
+        if date [4] == 1:
+                print (date[4], "seconde ", end="")
+        elif date [4] == 0:
+                print(end="")
+        else:
+                print (date[4], "secondes\n ")
     return afficheDate
 
+    temps = secondeEnTemps(1000000000)
 
+afficheDate()
 temps = secondeEnTemps(1000000000)
 afficheTemps(temps)
 afficheDate(tempsEnDate(temps))
