@@ -161,3 +161,5 @@ afficheDate(tempsEnDate(temps))
 import time
 import calendar
 calendar.timegm(time.gmtime())
+
+afficheDate(tempsEnDate(secondeEnTemps(calendar.timegm(time.gmtime()))))
