@@ -22,34 +22,33 @@ print(temps[0], "jours", temps[1], "heures", temps[2], "minutes",
       temps[3], "secondes\n")
 
 
-
 def afficheTemps(temps) :
-    if temps[0] == 1:
+    if temps[0] == 1 :
         print(temps[0], "jour ", end="")
-    elif temps[0] == 0:
+    elif temps[0] == 0 :
         print(end="")
-    else:
+    else :
         print(temps[0], "jours ", end="")
 
-    if temps[1] == 1:
+    if temps[1] == 1 :
         print(temps[1], "heure ", end="")
-    elif temps[1] == 0:
+    elif temps[1] == 0 :
         print(end="")
-    else: 
+    else :
         print(temps[1], "heures ", end="")
 
-    if temps[2] == 1:
+    if temps[2] == 1 :
         print(temps[2], "minute ", end="")
-    elif temps[2] == 0:
+    elif temps[2] == 0 :
         print(end="")
-    else:
+    else :
         print(temps[2], "minutes ", end="")
 
-    if temps[3] == 1:
+    if temps[3] == 1 :
         print(temps[3], "seconde ", end="")
-    elif temps[3] == 0:
+    elif temps[3] == 0 :
         print(end="")
-    else:
+    else :
         print(temps[3], "secondes\n ", end="")
     return afficheTemps
 
