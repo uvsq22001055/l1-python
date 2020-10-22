@@ -1,3 +1,6 @@
+import time
+import calendar
+
 def tempsEnSeconde(temps):
     temps = temps[0]*86400 + temps[1]*3600 + temps[2]*60 + temps[3]
     return temps
@@ -63,18 +66,19 @@ def demandeTemps():
 
     h = int(input("Nombre d'heures"))
     while h < 0 or h > 23:
-        h = int(input("ERREUR choisir un nombre d'heure compris entre 0 et 23"))
+        h = int(input("ERREUR choisir un nombre d'heure entre 0 et 23"))
 
     m = int(input("Nombre de minutes"))
     while m < 0 or m > 59:
-        m = int(input("ERREUR choisir un nombre de minutes compris entre 0 et 59"))
+        m = int(input("ERREUR choisir un nombre de minutes entre 0 et 59"))
 
     s = int(input("Choisir un nombre de seconde"))
     while s < 0 or s > 59:
-        s = int(input("ERREUR choisir un nombre de seconde compris entre 0 et 59"))
+        s = int(input("ERREUR choisir un nombre de seconde entre 0 et 59"))
 
     temps = (j, h, m, s)
     return temps
+
 
 demandeTemps()
 
@@ -110,9 +114,7 @@ def tempsEnDate(temps):
     return temps
 
 
-
-def afficheDate(date = -1):
-    temps_0 = (1970, 1, 00, 00, 00)
+def afficheDate(date=-1):
     if date == -1:
         print("1 janvier 1970 à 00:00:00")
     else:
@@ -147,8 +149,8 @@ def afficheDate(date = -1):
             print(date[4], "secondes\n ")
     return afficheDate
 
-    temps = secondeEnTemps(1000000000)
 
+temps = secondeEnTemps(1000000000)
 afficheDate()
 temps = secondeEnTemps(1000000000)
 afficheTemps(temps)
@@ -156,8 +158,6 @@ afficheDate(tempsEnDate(temps))
 
 
 
-import time
-import calendar
 calendar.timegm(time.gmtime())
 
 afficheDate(tempsEnDate(secondeEnTemps(calendar.timegm(time.gmtime()))))
