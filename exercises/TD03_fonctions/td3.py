@@ -53,7 +53,7 @@ def afficheTemps(temps):
     elif temps[3] == 0:
         print(end="")
     else:
-        print(temps[3], "secondes\n ", end="")
+        print(temps[3], "secondes\n ")
     return afficheTemps
 
 
@@ -73,7 +73,7 @@ def demandeTemps():
     while m < 0 or m > 59:
         m = int(input("ERREUR choisir un nombre de minutes entre 0 et 59"))
 
-    s = int(input("Choisir un nombre de seconde"))
+    s = int(input("Choisir un nombre de secondes"))
     while s < 0 or s > 59:
         s = int(input("ERREUR choisir un nombre de seconde entre 0 et 59"))
 
