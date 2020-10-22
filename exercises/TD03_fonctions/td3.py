@@ -3,6 +3,7 @@ import calendar
 
 
 def tempsEnSeconde(temps):
+    """ Renvoie la valeur en seconde de temps donné comme jour, heure, minute, seconde."""
     temps = temps[0]*86400 + temps[1]*3600 + temps[2]*60 + temps[3]
     return temps
 
@@ -13,6 +14,7 @@ print(tempsEnSeconde(temps))
 
 
 def secondeEnTemps(seconde):
+    """Renvoie le temps (jour, heure, minute, seconde) qui correspond au nombre de seconde passé en argument"""
     j = seconde//86400
     h = (seconde % 86400) // 3600
     m = ((seconde % 86400) % 3600) // 60
