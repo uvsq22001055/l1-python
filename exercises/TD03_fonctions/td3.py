@@ -61,21 +61,21 @@ afficheTemps((1, 0, 14, 23))
 
 
 def demandeTemps():
-    j = int(input("Nombre de jours"))
+    j = int(input("Nombre de jours "))
     while j < 0:
-        j = int(input("ERREUR choisir un nombre de jours POSITIF"))
+        j = int(input("ERREUR choisir un nombre de jours POSITIF "))
 
-    h = int(input("Nombre d'heures"))
+    h = int(input("Nombre d'heures "))
     while h < 0 or h > 23:
-        h = int(input("ERREUR choisir un nombre d'heure entre 0 et 23"))
+        h = int(input("ERREUR choisir un nombre d'heure entre 0 et 23 "))
 
-    m = int(input("Nombre de minutes"))
+    m = int(input("Nombre de minutes "))
     while m < 0 or m > 59:
-        m = int(input("ERREUR choisir un nombre de minutes entre 0 et 59"))
+        m = int(input("ERREUR choisir un nombre de minutes entre 0 et 59 "))
 
-    s = int(input("Choisir un nombre de secondes"))
+    s = int(input("Choisir un nombre de secondes "))
     while s < 0 or s > 59:
-        s = int(input("ERREUR choisir un nombre de seconde entre 0 et 59"))
+        s = int(input("ERREUR choisir un nombre de seconde entre 0 et 59 "))
 
     temps = (j, h, m, s)
     return temps
