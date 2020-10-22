@@ -1,6 +1,7 @@
 import time
 import calendar
 
+
 def tempsEnSeconde(temps):
     temps = temps[0]*86400 + temps[1]*3600 + temps[2]*60 + temps[3]
     return temps
@@ -86,8 +87,8 @@ demandeTemps()
 def sommeTemps(temps1, temps2):
     s1 = tempsEnSeconde(temps1)
     s2 = tempsEnSeconde(temps2)
-    s_t  = s1 + s2
-    print(secondeEnTemps(s_t))
+    st = s1 + s2
+    print(secondeEnTemps(st))
     return
 
 
@@ -119,13 +120,13 @@ def afficheDate(date=-1):
         print("1 janvier 1970 à 00:00:00")
     else:
         if date[1] == 1:
-            print(date[1] + 1,"ème jour de ", end="")
+            print(date[1] + 1, "ème jour de ", end="")
         elif date[1] == 0:
             print(end="")
         else:
-            print(date[1] + 1,"ème jours de ", end="")
+            print(date[1] + 1, "ème jours de ", end="")
 
-        print(date[0] + 1970,"à ", end="")
+        print(date[0] + 1970, "à ", end="")
 
         if date[2] == 1:
             print(date[2], "heure ", end="")
@@ -155,7 +156,6 @@ afficheDate()
 temps = secondeEnTemps(1000000000)
 afficheTemps(temps)
 afficheDate(tempsEnDate(temps))
-
 
 
 calendar.timegm(time.gmtime())
