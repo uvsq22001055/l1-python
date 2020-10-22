@@ -175,3 +175,17 @@ def bisextile(jour):
 
 
 bisextile(20000)
+
+
+def nombreBisextile(jour):
+    a = 2020
+    j = 1
+    b = 0
+    while j <= jour:
+        j += 1
+        if j % 365 == 0:
+            a += 1
+            if (a % 4 == 0 and a % 100 != 0) or a % 400 == 0:
+                b += 1
+    print(b)
+    return
