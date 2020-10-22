@@ -9,7 +9,7 @@ def tempsEnSeconde(temps):
 
 temps = (3, 23, 1, 34)
 print(type(temps))
-print(tempsEnSeconde(temps))   
+print(tempsEnSeconde(temps))
 
 
 def secondeEnTemps(seconde):
@@ -132,7 +132,7 @@ def afficheDate(date=-1):
             print(date[2], "heure ", end="")
         elif date[2] == 0:
             print(end="")
-        else: 
+        else:
             print(date[2], "heures ", end="")
 
         if date[3] == 1:
@@ -159,5 +159,5 @@ afficheDate(tempsEnDate(temps))
 
 
 calendar.timegm(time.gmtime())
-
 afficheDate(tempsEnDate(secondeEnTemps(calendar.timegm(time.gmtime()))))
+
