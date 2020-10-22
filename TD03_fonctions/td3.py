@@ -7,14 +7,16 @@ temps = (3, 23, 1, 34)
 print(type(temps))
 print(tempsEnSeconde(temps))   
 
+
 def secondeEnTemps(seconde):
-        j = seconde//86400
-        h = (seconde % 86400) // 3600
-        m = ((seconde % 86400) % 3600) // 60
-        s = ((seconde % 86400) % 3600) % 60
-        temps = (j, h, m, s)
-        return temps
-    
+    j = seconde//86400
+    h = (seconde % 86400) // 3600
+    m = ((seconde % 86400) % 3600) // 60
+    s = ((seconde % 86400) % 3600) % 60
+    temps = (j, h, m, s)
+    return temps
+
+
 temps = secondeEnTemps(100000)
 print(temps[0], "jours", temps[1], "heures", temps[2], "minutes", temps[3], "secondes\n")
 
@@ -63,7 +65,7 @@ def demandeTemps():
     m = int(input("Nombre de minutes"))
     while m < 0 or m > 59 :
         m = int(input("ERREUR choisir un nombre de minutes compris entre 0 et 59"))
-    
+
     s = int(input("Choisir un nombre de seconde"))
     while s < 0 or s > 59 :
         s = int(input("ERREUR choisir un nombre de seconde compris entre 0 et 59"))
@@ -77,8 +79,8 @@ demandeTemps()
 def sommeTemps(temps1, temps2):
     s1 = tempsEnSeconde(temps1)
     s2 = tempsEnSeconde(temps2)
-    st  = s1 + s2
-    print(secondeEnTemps(st))
+    s_t  = s1 + s2
+    print(secondeEnTemps(s_t))
     return
 
 
@@ -86,11 +88,10 @@ sommeTemps((2,3,4,25),(5,22,57,1))
 
 
 def proportionTemps(temps,proportion):
-    
     temps_proportionne = int(tempsEnSeconde(temps) * proportion)
     temps = secondeEnTemps(temps_proportionne)
-    
     return temps
+
 
 afficheTemps(proportionTemps((2,0,36,0),0.2))
 
@@ -101,9 +102,11 @@ def tempsEnDate(temps):
     j = (s % 31536000) // 86400
     h = ((s % 31536000) % 86400) // 3600
     mn = (((s % 31536000) % 86400) % 3600) // 60
-    s = (((s % 31536000) % 86400) % 3600) % 60
-    temps =  (a, j, h, mn, s)
+    sec = (((s % 31536000) % 86400) % 3600) % 60
+    temps = (a, j, h, mn, sec)
     return temps
+
+
 
 def afficheDate(date = -1):
     temps_0 = (1970, 1, 00, 00, 00)
