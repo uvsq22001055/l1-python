@@ -160,4 +160,3 @@ afficheDate(tempsEnDate(temps))
 
 calendar.timegm(time.gmtime())
 afficheDate(tempsEnDate(secondeEnTemps(calendar.timegm(time.gmtime()))))
-
