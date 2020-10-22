@@ -160,3 +160,18 @@ afficheDate(tempsEnDate(temps))
 
 calendar.timegm(time.gmtime())
 afficheDate(tempsEnDate(secondeEnTemps(calendar.timegm(time.gmtime()))))
+
+
+def bisextile(jour):
+    a = 2020
+    j = 1
+    while j <= jour:
+        j += 1
+        if j % 365 == 0:
+            a += 1
+            if (a % 4 == 0 and a % 100 != 0) or a % 400 == 0:
+                print(a)
+    return
+
+
+bisextile(20000)
