@@ -18,9 +18,12 @@ def secondeEnTemps(seconde):
 
 
 temps = secondeEnTemps(100000)
-print(temps[0], "jours", temps[1], "heures", temps[2], "minutes", temps[3], "secondes\n")
+print(temps[0], "jours", temps[1], "heures", temps[2], "minutes",
+      temps[3], "secondes\n")
 
-def afficheTemps (temps): 
+
+
+def afficheTemps(temps) :
     if temps[0] == 1:
         print(temps[0], "jour ", end="")
     elif temps[0] == 0:
@@ -43,14 +46,15 @@ def afficheTemps (temps):
         print(temps[2], "minutes ", end="")
 
     if temps[3] == 1:
-        print (temps[3], "seconde ", end="")
+        print(temps[3], "seconde ", end="")
     elif temps[3] == 0:
         print(end="")
     else:
         print(temps[3], "secondes\n ", end="")
     return afficheTemps
 
-afficheTemps((1,0,14,23))
+
+afficheTemps((1, 0, 14, 23))
 
 
 def demandeTemps():
