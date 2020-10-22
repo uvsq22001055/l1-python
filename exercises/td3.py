@@ -158,6 +158,6 @@ afficheDate(tempsEnDate(temps))
 
 
 
-#import time
-#import calendar
-#calendar.timegm(time.gmtime())
+import time
+import calendar
+calendar.timegm(time.gmtime())
