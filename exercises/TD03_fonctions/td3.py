@@ -26,6 +26,13 @@ print(temps[0], "jours", temps[1], "heures", temps[2], "minutes",
       temps[3], "secondes\n")
 
 
+def affichePluriel(val, mot):
+    if val != 0:
+        print(" ", val, mot, end="")
+    if val > 1:
+        print("s", end="")
+
+
 def afficheTemps(temps):
     if temps[0] == 1:
         print(temps[0], "jour ", end="")
