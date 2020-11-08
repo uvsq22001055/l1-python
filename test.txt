@@ -1,0 +1,9 @@
+l = [3, 5, 10]
+l.extend([12, 17])
+l[2] = -7
+
+n = 0
+for n in range(0, 5):
+    l[n] *= 2
+
+print[l]
