@@ -1,14 +1,16 @@
 def syracuse(n):
     res = []
-    while True :
+    while True:
         res.append(n)
         if n == 1:
-             break
+            break
         if n % 2 == 0:
-            n = n //2
+            n = n // 2
         else:
             n = 3 * n + 1
     return res
+
+
 print(syracuse(3))
 
 
