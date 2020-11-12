@@ -37,6 +37,9 @@ def tempsVolListe(n_max):
 print(tempsVolListe(10))
 
 
+liste_vol = tempsVolListe(10000)
+vol_max = max(liste_vol)
+print("temps de vol maximum", vol_max)
+print("atteint par l'entier", liste_vol.index(vol_max) + 1)
+
 print("Le temps de vol de", 3, "est", tempsVol(3))
-# Carré Magique
-# 34
