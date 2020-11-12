@@ -29,6 +29,14 @@ def tempsVol(n):
     return len(syracuse(n))-1
 
 
+def tempsVolListe(n_max):
+    """ Retourne la liste de tous les temps de vol de 1 à n_max """
+    return [tempsVol(i) for i in range(1, n_max + 1)]
+
+
+print(tempsVolListe(10))
+
+
 print("Le temps de vol de", 3, "est", tempsVol(3))
 # Carré Magique
 # 34
