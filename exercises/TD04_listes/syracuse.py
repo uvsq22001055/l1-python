@@ -1,28 +1,25 @@
 def syracuse(n):
-    """ Retourne la liste des valeurs de la suite en partant de n jusqu'à 1 """
-    print(n)
-    while n != 1:
-
+    res = []
+    while True :
+        res.append(n)
+        if n == 1:
+             break
         if n % 2 == 0:
-            n /= 2
-            print(n)
+            n = n //2
         else:
-            n = (n * 3) + 1
-            print(n)
-    print("\n")
-
-
+            n = 3 * n + 1
+    return res
 print(syracuse(3))
 
 
 def testeConjecture(n_max):
     """ Teste la conjecture de Collatz pour toutes les valeurs de 2 à n_max """
-    for i in range(1, n_max):
+    for i in range(1, n_max + 1):
         syracuse(i)
-    print("TRUE")
+    return True
 
 
-print(testeConjecture(10))
+print(testeConjecture(10000))
 
 
 def tempsVol(n):
