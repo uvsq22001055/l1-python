@@ -27,7 +27,7 @@ print(testeConjecture(10))
 
 def tempsVol(n):
     """ Retourne le temps de vol de n """
-    pass
+    return len(syracuse(n))-1
 
 
 print("Le temps de vol de", 3, "est", tempsVol(3))
