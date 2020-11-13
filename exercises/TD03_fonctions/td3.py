@@ -160,6 +160,7 @@ def afficheDate(date=-1):
 
 temps = secondeEnTemps(1000000000)
 afficheDate()
+
 temps = secondeEnTemps(1000000000)
 afficheTemps(temps)
 afficheDate(tempsEnDate(temps))
