@@ -75,3 +75,22 @@ def testLignesEgales(carre):
 
 print(testLignesEgales(carre_mag))
 print(testLignesEgales(carre_pas_mag))
+
+
+def testColonnesEgales(carre):
+    """ Renvoie la somme des éléments d'une colonne de la liste 2D carre si toutes les colonnes ont la même somme, et -1 sinon """
+    nb_colonne = len(carre)
+    list_somme = []
+    for i in range(len(carre)):
+        s = 0
+        for k in range(len(carre[i])): 
+            s += carre[k][i]
+        list_somme.append(s)
+    if s * nb_colonne != sum(list_somme):
+        return -1
+    else:
+        return s
+
+
+print(testColonnesEgales(carre_mag))
+print(testColonnesEgales(carre_pas_mag))
