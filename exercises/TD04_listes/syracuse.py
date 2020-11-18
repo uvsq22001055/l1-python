@@ -98,7 +98,6 @@ print(testColonnesEgales(carre_pas_mag))
 
 def testDiagonalesEgales(carre):
     """ Renvoie la somme des éléments d'une diagonale de la liste 2D carre si les 2 diagonales ont la même somme, et -1 sinon """
-    nb_colonne = len(carre)
     list_somme1 = []
     list_somme2 = []
     for i in range(len(carre)):
@@ -107,13 +106,46 @@ def testDiagonalesEgales(carre):
         list_somme1.append(s)
     for i in range(len(carre)):
          s = 0 
-         s += carre[i][abs(i - nb_colonne +1)]
+         s += carre[i][abs(i - (len(carre)) +1)]
          list_somme2.append(s)
-         
-    if sum(list_somme1) != sum(list_somme2):
+
+    if sum(list_somme2) != sum(list_somme1) :
         return -1
     else:
         return sum(list_somme1)
 
 print(testDiagonalesEgales(carre_mag))
-print(testDiagonalesEgales(carre_pas_mag))
+print(testDiagonalesEgales(carre_pas_mag))S
+
+
+def estCarreMagique(carre):
+    """ Renvoie True si c'est un carre magique et False sinon"""
+    if testLignesEgales(carre) == testColonnesEgales(carre) == testDiagonalesEgales(carre):
+        return True
+    else :
+        return False
+
+print(estCarreMagique(carre_mag))
+print(estCarreMagique(carre_pas_mag))
+
+def estNormal(carre):
+    """ Retourne True si contient toutes les valeurs de 1 à n^2 où n est la taille 
+        du carré, et False sinon """
+    list_sommeT = []
+    s = 0
+    l_c = len(carre) ** 2
+    for i in range(l_c):
+        s += 1
+        list_sommeT.append(s)
+        
+    print(list_sommeT)
+    print(s)
+    print(l_c)
+    if list_sommeT == l_c:
+        return True
+    else:
+        return False
+
+
+print(estNormal(carre_mag))
+print(estNormal(carre_pas_mag))
