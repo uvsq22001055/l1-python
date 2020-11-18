@@ -57,3 +57,21 @@ def afficheCarre(carre):
 
 afficheCarre(carre_mag)
 afficheCarre(carre_pas_mag)
+
+
+def testLignesEgales(carre):
+    """ Renvoie la somme des éléments d'une ligne de la liste 2D carre si toutes les lignes ont la même somme, et -1 sinon"""
+    lenght = len(carre)
+    list_somme = []
+    for i in range(lenght):
+        s = 0
+        s += sum(carre[i])
+        list_somme.append(s)
+    if s * lenght != sum(list_somme):
+        print("-1")
+    else:
+        print(s)
+
+
+print(testLignesEgales(carre_mag))
+print(testLignesEgales(carre_pas_mag))
