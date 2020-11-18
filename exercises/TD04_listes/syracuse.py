@@ -43,3 +43,17 @@ print("temps de vol maximum", vol_max)
 print("atteint par l'entier", liste_vol.index(vol_max) + 1)
 
 print("Le temps de vol de", 3, "est", tempsVol(3))
+
+carre_mag = [[4, 14, 15, 1], [9, 7, 6, 12], [5, 11, 10, 8], [16, 2, 3, 13]]
+carre_pas_mag = [[4, 14, 15, 1], [9, 7, 6, 12], [5, 11, 10, 8], [16, 2, 7, 13]]
+
+
+def afficheCarre(carre):
+    """ Affiche la liste à 2 dimensions carre comme un carré"""
+    for i in carre:
+        print(i)
+    print('\n')
+
+
+afficheCarre(carre_mag)
+afficheCarre(carre_pas_mag)
