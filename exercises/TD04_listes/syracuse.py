@@ -94,3 +94,26 @@ def testColonnesEgales(carre):
 
 print(testColonnesEgales(carre_mag))
 print(testColonnesEgales(carre_pas_mag))
+
+
+def testDiagonalesEgales(carre):
+    """ Renvoie la somme des éléments d'une diagonale de la liste 2D carre si les 2 diagonales ont la même somme, et -1 sinon """
+    nb_colonne = len(carre)
+    list_somme1 = []
+    list_somme2 = []
+    for i in range(len(carre)):
+        s = 0 
+        s += carre[i][i]
+        list_somme1.append(s)
+    for i in range(len(carre)):
+         s = 0 
+         s += carre[i][abs(i - nb_colonne +1)]
+         list_somme2.append(s)
+         
+    if sum(list_somme1) != sum(list_somme2):
+        return -1
+    else:
+        return sum(list_somme1)
+
+print(testDiagonalesEgales(carre_mag))
+print(testDiagonalesEgales(carre_pas_mag))
