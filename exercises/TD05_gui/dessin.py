@@ -1,12 +1,21 @@
 import tkinter as tk
+import random
 
+CANVAS_WIDTH, CANVAS_HEIGHT = 500, 500
+
+# disque de diamètre 100 en bleu à un endroit choisi au hasard dans le canevas. Le cercle doit être inclu intégralement dans le canevas.
+def Disque():
+    x = random.randint(0, CANVAS_WIDTH-100)
+    y = random.randint(0, CANVAS_HEIGHT-100)
+    canvas.create_oval(x, y, x + 100, y +100)
+    return
 
 
 racine = tk.Tk()
 racine.title('Mon dessin')
 
 bouton = tk.Button(racine, text="choisir une couleur", font = ("helvetica", "10"), activebackground = '#BBBBBB', overrelief = 'groove')
-bouton1 = tk.Button(racine, text="cercle", font = ("helvetica", "10"), activebackground = '#D8D0AA')
+bouton1 = tk.Button(racine, text="cercle", command = Disque, font = ("helvetica", "10"), activebackground = '#D8D0AA')
 bouton2 = tk.Button(racine, text="carré", font = ("helvetica", "10"), activebackground = '#A0AACC')
 bouton3 = tk.Button(racine, text="croix", font = ("helvetica", "10"), activebackground = '#DFAAAA')
 
@@ -17,7 +26,7 @@ bouton3.grid(column = 0, row= 3)
 
 
 
-canvas = tk.Canvas(racine, bg='black', height=500, width=500, borderwidth = '10', relief = 'sunken')
+canvas = tk.Canvas(racine, bg='white', height=CANVAS_HEIGHT, width=CANVAS_HEIGHT, borderwidth = '10', relief = 'sunken')
 canvas.grid(column= 1, row = 1, rowspan = 3)
 
 racine.mainloop() # Lancement de la boucle principale
