@@ -13,6 +13,6 @@ epaisseur = (COTE // 2) // nb_cercles #8
 for i in range(nb_cercles):
     canvas.create_oval((epaisseur*i, epaisseur *i),
     (COTE-epaisseur*i, COTE-epaisseur*i), fill = colors[i %len(colors)],
-    outline=colors[i%len(colors)]
-    )
+    outline=colors[i%len(colors)])
+
 racine.mainloop()
