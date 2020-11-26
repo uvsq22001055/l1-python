@@ -19,8 +19,8 @@ def Rectangle():
 def Croix():
     x = random.randint(0, CANVAS_WIDTH-100)
     y = random.randint(0, CANVAS_HEIGHT-100)
-    canvas.create_line(x -20, y + 20, x + 20, y - 20, fill = 'yellow')
-    canvas.create_line(x-20, y -20 , x + 20, y + 20, fill = 'yellow')
+    canvas.create_line(x -20, y + 20, x + 20, y - 20, fill = 'yellow', width = '5')
+    canvas.create_line(x-20, y -20 , x + 20, y + 20, fill = 'yellow', width = '5')
     
     return
 
