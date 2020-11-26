@@ -24,7 +24,8 @@ def Croix():
     
     return
 
-def Color
+def Color():
+    choose = input("choisir une couleur")
 
 racine = tk.Tk()
 racine.title('Mon dessin')
