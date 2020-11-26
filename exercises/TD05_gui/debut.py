@@ -15,7 +15,7 @@ canvas.create_line(CANVAS_WIDTH/2, CANVAS_HEIGHT, CANVAS_WIDTH/2, - CANVAS_HEIGH
 canvas.create_oval(x0 - 50, y + 50, x0 + 50, y - 50) #creation ovale -> cerlce, de diametre 100 (cercle de gauche) de centre x0
 canvas.create_oval(x1 - 50, y + 50, x1 + 50, y - 50) #creation ovale -> cerlce, de diametre 100 (cercle de droite)de centre x1
 canvas.create_oval((x0 + x1) / 2 - 50, y + 50, (x0 + x1) / 2 + 50, y - 50) #creation ovale -> cerlce, de diametre 100 (cercle du mileu) centre milieu[x0, x1]
-canvas.grid()
-# Fin de votre code
 
+# Fin de votre code
+canvas.grid()
 root.mainloop()
