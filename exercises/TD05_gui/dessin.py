@@ -20,9 +20,9 @@ racine = tk.Tk()
 racine.title('Mon dessin')
 
 bouton = tk.Button(racine, text="choisir une couleur", font = ("helvetica", "10"), activebackground = '#BBBBBB', overrelief = 'groove')
-bouton1 = tk.Button(racine, text="cercle", command = Disque, font = ("helvetica", "10"), activebackground = '#D8D0AA')
-bouton2 = tk.Button(racine, text="carré", command = Rectangle, font = ("helvetica", "10"), activebackground = '#A0AACC')
-bouton3 = tk.Button(racine, text="croix", font = ("helvetica", "10"), activebackground = '#DFAAAA')
+bouton1 = tk.Button(racine, text="cercle", command = Disque, font = ("helvetica", "10"), activebackground = '#A0AACC')
+bouton2 = tk.Button(racine, text="carré", command = Rectangle, font = ("helvetica", "10"), activebackground = '#DFAAAA')
+bouton3 = tk.Button(racine, text="croix", font = ("helvetica", "10"), activebackground = '#D8D0AA')
 
 bouton.grid(column = 1, row= 0)
 bouton1.grid(column = 0, row= 1)
