@@ -7,31 +7,31 @@ CANVAS_WIDTH, CANVAS_HEIGHT = 500, 500
 def Disque():
     x = random.randint(0, CANVAS_WIDTH-99)
     y = random.randint(0, CANVAS_HEIGHT-99)
-    canvas.create_oval(x, y, x + 100, y +100, fill = 'blue')
+    canvas.create_oval(x, y, x + 100, y +100, fill = color)
     return
 
 def Rectangle():
     x = random.randint(0, CANVAS_WIDTH-99)
     y = random.randint(0, CANVAS_HEIGHT-99)
-    canvas.create_rectangle(x, y, x + 100, y +100, fill = 'red')
+    canvas.create_rectangle(x, y, x + 100, y +100, fill = color)
     return
 
 def Croix():
-    x = random.randint(40, CANVAS_WIDTH-19)
-    y = random.randint(40, CANVAS_HEIGHT-19)
-    line1 =canvas.create_line(x -20, y + 20, x + 20, y - 20, fill = 'yellow', width = '5')
-    line2 =canvas.create_line(x-20, y -20 , x + 20, y + 20, fill = 'yellow', width = '5')
+    x = random.randint(0, CANVAS_WIDTH-99)
+    y = random.randint(0, CANVAS_HEIGHT-99)
+    line1 =canvas.create_line((x, y), (x+100, y+100), fill = color)
+    line2 =canvas.create_line((x+100, y), (x, y +100), fill = color)
     
     return
 
-def Color():
-    choose = input("choisir une couleur")
-    pass
+def Choisir_couleur():
+    global color
+    color = input("choisis une couleur:")
 
 racine = tk.Tk()
 racine.title('Mon dessin')
 
-bouton = tk.Button(racine, text="choisir une couleur", font = ("helvetica", "10"), activebackground = '#BBBBBB', overrelief = 'groove')
+bouton = tk.Button(racine, text="choisir une couleur", command = Choisir_couleur, font = ("helvetica", "10"), activebackground = '#BBBBBB', overrelief = 'groove')
 bouton1 = tk.Button(racine, text="cercle", command = Disque, font = ("helvetica", "10"), activebackground = '#A0AACC')
 bouton2 = tk.Button(racine, text="carré", command = Rectangle, font = ("helvetica", "10"), activebackground = '#DFAAAA')
 bouton3 = tk.Button(racine, text="croix", command = Croix, font = ("helvetica", "10"), activebackground = '#D8D0AA')
