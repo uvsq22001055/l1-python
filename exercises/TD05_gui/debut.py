@@ -8,14 +8,13 @@ root = tk.Tk()
 canvas = tk.Canvas(root, width = CANVAS_WIDTH, height = CANVAS_HEIGHT)
 
 # Début de votre code
-x0 = 100 #ligne imaginaire vertical en x = 100unité depuis le bord gauche(centre du premier cercle a gauche)
-x1 = CANVAS_WIDTH - 100 #ligne imaginaire vertical en x = -100unité depuis le bord droit(centre du premier cercle a droite)
-y = CANVAS_HEIGHT / 2 #hauteur du centre de la feuille
-canvas.create_line(CANVAS_WIDTH/2, CANVAS_HEIGHT, CANVAS_WIDTH/2, - CANVAS_HEIGHT)  #ligne du point 1(x0, y) au point 2(x1, y)
-canvas.create_oval(x0 - 50, y + 50, x0 + 50, y - 50) #creation ovale -> cerlce, de diametre 100 (cercle de gauche) de centre x0
-canvas.create_oval(x1 - 50, y + 50, x1 + 50, y - 50) #creation ovale -> cerlce, de diametre 100 (cercle de droite)de centre x1
-canvas.create_oval((x0 + x1) / 2 - 50, y + 50, (x0 + x1) / 2 + 50, y - 50) #creation ovale -> cerlce, de diametre 100 (cercle du mileu) centre milieu[x0, x1]
-
-# Fin de votre code
+x = CANVAS_WIDTH //2 #ligne imaginaire vertical en x = 100unité depuis le bord gauche(centre du premier cercle a gauche)
+y1 = 100 #hauteur du centre de la feuille
+y2=CANVAS_HEIGHT - 100
+canvas.create_line((x, y1), (x, y2))
+canvas.create_oval(x - 50, y1 + 50, x + 50, y1 - 50) #creation ovale -> cerlce, de diametre 100 (cercle de gauche) de centre x0
+canvas.create_oval(x - 50, y2 + 50, x + 50, y2 - 50) #creation ovale -> cerlce, de diametre 100 (cercle de droite)de centre x1
+canvas.create_oval((x - 50 , (y1 + y2) // 2 + 50, x + 50, (y1 + y2) // 2-50))
 canvas.grid()
+
 root.mainloop()
