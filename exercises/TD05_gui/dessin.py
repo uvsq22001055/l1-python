@@ -5,20 +5,20 @@ CANVAS_WIDTH, CANVAS_HEIGHT = 500, 500
 
 # disque de diamètre 100 en bleu à un endroit choisi au hasard dans le canevas. Le cercle doit être inclu intégralement dans le canevas.
 def Disque():
-    x = random.randint(0, CANVAS_WIDTH-100)
-    y = random.randint(0, CANVAS_HEIGHT-100)
+    x = random.randint(0, CANVAS_WIDTH-99)
+    y = random.randint(0, CANVAS_HEIGHT-99)
     canvas.create_oval(x, y, x + 100, y +100, fill = 'blue')
     return
 
 def Rectangle():
-    x = random.randint(0, CANVAS_WIDTH-100)
-    y = random.randint(0, CANVAS_HEIGHT-100)
+    x = random.randint(0, CANVAS_WIDTH-99)
+    y = random.randint(0, CANVAS_HEIGHT-99)
     canvas.create_rectangle(x, y, x + 100, y +100, fill = 'red')
     return
 
 def Croix():
-    x = random.randint(0, CANVAS_WIDTH-100)
-    y = random.randint(0, CANVAS_HEIGHT-100)
+    x = random.randint(40, CANVAS_WIDTH-19)
+    y = random.randint(40, CANVAS_HEIGHT-19)
     line1 =canvas.create_line(x -20, y + 20, x + 20, y - 20, fill = 'yellow', width = '5')
     line2 =canvas.create_line(x-20, y -20 , x + 20, y + 20, fill = 'yellow', width = '5')
     
@@ -26,6 +26,7 @@ def Croix():
 
 def Color():
     choose = input("choisir une couleur")
+    pass
 
 racine = tk.Tk()
 racine.title('Mon dessin')
@@ -41,7 +42,7 @@ bouton2.grid(column = 0, row= 2)
 bouton3.grid(column = 0, row= 3)
 
 
-canvas = tk.Canvas(racine, bg='white', height=CANVAS_HEIGHT, width=CANVAS_HEIGHT, borderwidth = '10', relief = 'sunken')
+canvas = tk.Canvas(racine, bg='black', height=CANVAS_HEIGHT, width=CANVAS_HEIGHT, borderwidth = '10', relief = 'sunken')
 canvas.grid(column= 1, row = 1, rowspan = 3)
 
 racine.mainloop() # Lancement de la boucle principale
