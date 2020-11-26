@@ -16,13 +16,21 @@ def Rectangle():
     canvas.create_rectangle(x, y, x + 100, y +100, fill = 'red')
     return
 
+def Croix():
+    x = random.randint(0, CANVAS_WIDTH-100)
+    y = random.randint(0, CANVAS_HEIGHT-100)
+    canvas.create_line(x -20, y + 20, x + 20, y - 20, fill = 'yellow')
+    canvas.create_line(x-20, y -20 , x + 20, y + 20, fill = 'yellow')
+    
+    return
+
 racine = tk.Tk()
 racine.title('Mon dessin')
 
 bouton = tk.Button(racine, text="choisir une couleur", font = ("helvetica", "10"), activebackground = '#BBBBBB', overrelief = 'groove')
 bouton1 = tk.Button(racine, text="cercle", command = Disque, font = ("helvetica", "10"), activebackground = '#A0AACC')
 bouton2 = tk.Button(racine, text="carré", command = Rectangle, font = ("helvetica", "10"), activebackground = '#DFAAAA')
-bouton3 = tk.Button(racine, text="croix", font = ("helvetica", "10"), activebackground = '#D8D0AA')
+bouton3 = tk.Button(racine, text="croix", command = Croix, font = ("helvetica", "10"), activebackground = '#D8D0AA')
 
 bouton.grid(column = 1, row= 0)
 bouton1.grid(column = 0, row= 1)
