@@ -19,10 +19,12 @@ def Rectangle():
 def Croix():
     x = random.randint(0, CANVAS_WIDTH-100)
     y = random.randint(0, CANVAS_HEIGHT-100)
-    canvas.create_line(x -20, y + 20, x + 20, y - 20, fill = 'yellow', width = '5')
-    canvas.create_line(x-20, y -20 , x + 20, y + 20, fill = 'yellow', width = '5')
+    line1 =canvas.create_line(x -20, y + 20, x + 20, y - 20, fill = 'yellow', width = '5')
+    line2 =canvas.create_line(x-20, y -20 , x + 20, y + 20, fill = 'yellow', width = '5')
     
     return
+
+def Color
 
 racine = tk.Tk()
 racine.title('Mon dessin')
@@ -36,7 +38,6 @@ bouton.grid(column = 1, row= 0)
 bouton1.grid(column = 0, row= 1)
 bouton2.grid(column = 0, row= 2)
 bouton3.grid(column = 0, row= 3)
-
 
 
 canvas = tk.Canvas(racine, bg='white', height=CANVAS_HEIGHT, width=CANVAS_HEIGHT, borderwidth = '10', relief = 'sunken')
