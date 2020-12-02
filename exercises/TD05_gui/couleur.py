@@ -33,16 +33,12 @@ def degrade_gris():
         c += 1
 
 def degrade_2D():
-    r = 0
-    b = 0
-    for i in range(0, 255):
-        color = get_color(r, 0, b)
-        for j in range(255, 0, -1):
-            draw_pixel(j, j, color)
+    for j in range(0, 255):
+        for i in range(255, 0, -1):
+            color = get_color(i, 0, j)
+            draw_pixel(i, j, color)
+            
         
-        
-        r += 1
-        b += 1
 
 
 
