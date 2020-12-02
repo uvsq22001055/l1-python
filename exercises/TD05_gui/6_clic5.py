@@ -26,6 +26,9 @@ def appui_touche1(event):
         for item in canvas.find_all():
             if canvas.type(item) == 'oval':
                 canvas.itemconfig(item, fill='yellow')
+    elif nb_clic == 10:
+        canvas.create_rectangle(0, 0, 500, 500, fill='black')
+        nb_clic = 0
 
 canvas.bind('<Button-1>', appui_touche1)
 
