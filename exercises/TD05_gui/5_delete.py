@@ -3,38 +3,42 @@ import random
 
 CANVAS_WIDTH, CANVAS_HEIGHT = 500, 500
 
-global objets
+
 objets = []
+
 
 # disque de diamètre 100 en bleu à un endroit choisi au hasard dans le canevas. Le cercle doit être inclu intégralement dans le canevas.
 def Disque():
+    global objets
     x = random.randint(0, CANVAS_WIDTH-99)
     y = random.randint(0, CANVAS_HEIGHT-99)
     cercle = canvas.create_oval(x, y, x + 100, y +100, fill = color)
     objets.append(cercle)
-    return
+    
 
 def Rectangle():
+    global objets
     x = random.randint(0, CANVAS_WIDTH-99)
     y = random.randint(0, CANVAS_HEIGHT-99)
     rect = canvas.create_rectangle(x, y, x + 100, y +100, fill = color)
     objets.append(rect)
-    return
 
 def Croix():
+    global objets
     x = random.randint(0, CANVAS_WIDTH-99)
     y = random.randint(0, CANVAS_HEIGHT-99)
     line1 =canvas.create_line((x, y), (x+100, y+100), fill = color)
     line2 =canvas.create_line((x+100, y), (x, y +100), fill = color)
     objets.append(line1)
     objets.append(line2)
-    return
+    
 
 def Choisir_couleur():
     global color
     color = input("choisis une couleur:")
 
 def Undo():
+    global objets
     if not(objets):
         return
     else:
@@ -46,7 +50,6 @@ def Undo():
         else:
             canvas.delete(objets[-1])
             del objets[-1]
-    return
 
 racine = tk.Tk()
 racine.title('Mon dessin')
