@@ -1,30 +1,17 @@
-import tkinter as tk
-import random as rd
-
-CANVAS_WIDTH, CANVAS_HEIGHT = 256, 256
-
-racine = tk.Tk()
-
-canvas = tk.Canvas(racine, bg='black', height=CANVAS_HEIGHT, width=CANVAS_HEIGHT)
-
-
 def get_color(r, g, b):
     """ Retourne une couleur à partir de ses composantes r, g, b entre 0 et 255"""
     return '#{:02x}{:02x}{:02x}'.format(r, g, b)
 
-def draw_pixel(i, j, color):
-    pixel = canvas.create_rectangle(i, j, i, j, fill = color, width=0)
-    return pixel
+import tkinter as tk 
 
+racine = tk.Tk()
 
+button1 = tk.Button(racine, text="aléatoire", font=("Courier", "26"))
+button2 = tk.Button(racine, text = "dégradé gris", font=("Courier", "26"))
+button3 = tk.Button(racine, text = "dégradé 2D", font=("Courier", "26"))
 
-
-
-degrade_gris()
-
-canvas.grid()
-
-
-
+button1.grid(column=0, row=0)
+button2.grid(column=0, row=1)
+button3.grid(column=0, row=2)
 
 racine.mainloop()
