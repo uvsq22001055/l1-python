@@ -1,7 +1,7 @@
 import tkinter as tk
 import random as rd
 
-CANVAS_WIDTH, CANVAS_HEIGHT = 256, 256
+CANVAS_WIDTH, CANVAS_HEIGHT = 252, 256
 
 racine = tk.Tk()
 
@@ -18,19 +18,17 @@ def draw_pixel(i, j, color):
 
 
 def ecran_aleatoire():
-    for i in range(0, 258):
-        for j in range(0, 258):
+    for i in range(256):
+        for j in range(256):
             list_color = ['white', 'black', 'red', 'green', 'blue', 'cyan', 'yellow', 'magenta']
             color = rd.choice(list_color)
             draw_pixel(i, j, color)
 
-def degrade_gris():
-    c = 0    
-    for i in range(0, 258):
-        color = get_color(c, c, c)
-        for j in range(0, 258):
+def degrade_gris():    
+    for i in range(256):
+        color = get_color(i, i, i)
+        for j in range(256):
             draw_pixel(i, j, color)
-        c += 1
 
 def degrade_2D():
     for j in range(0, 255):
